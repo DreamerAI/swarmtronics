@@ -1,0 +1,116 @@
+/* Publication card components */
+
+
+.publications__card--container {
+    color: #000000;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 90vw;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    cursor: pointer;
+}
+
+.publications__card--wrapper {
+
+    padding: 20px 0;
+    display: flex;
+    border-radius: 10px;
+
+}
+
+
+.publications__card--wrapperDark {
+    color: #fff;
+    padding: 20px 0;
+    margin: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #000000;
+    display: flex;
+
+}
+
+.publications__card--title {
+    padding-left: 2%;
+    font-size: 2.9rem;
+    font-weight: 400;
+}
+
+.publications__card--info {
+    font-size: 1.2rem;
+}
+
+.publications__card--link a {
+    width: 100px;
+    padding: 0;
+    padding-left: 10px;
+}
+
+.publications__card--info p {
+    padding: 30px 40px;
+
+}
+
+.publications__card--info a {
+    color: #08D3FF;
+    text-decoration: none;
+
+}
+
+.publcations__card--btn {
+    background: transparent;
+    border-color: transparent;
+    font-size: 2.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    align-self: center;
+
+}
+
+
+/* Publications Component classes */
+
+.publications__title--wrapper {
+    position: relative;
+    font-family: sans-serif;
+    margin-bottom: 70px;
+}
+
+.publications__title {
+    color: #000000;
+    font-weight: 550;
+    text-align: left;
+    padding-top: 120px;
+    margin-left: 150px;
+    font-size: 4.7rem;
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+}
+
+.publications__title--stroke {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 50%;
+    left: 35px;
+    transform: translateY(-50%);
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 960px) {
+    .publications__title {
+        padding: 10% 0 0 0;
+        margin: 0;
+        text-align: center;
+        font-size: 3.2rem;
+    }
+
+    .publications__card--title {
+        font-size: 1.7rem;
+    }
+}

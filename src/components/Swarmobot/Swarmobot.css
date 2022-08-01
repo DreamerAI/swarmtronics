@@ -1,0 +1,116 @@
+.swarmobot-container {
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 1024px;
+  background-image: url(../../../public/images/Swarmobot_Background.png);
+  background-position: 100%;
+  display: block;
+}
+
+.swarmobot__title--wrapper {
+  position: relative;
+  font-family: sans-serif;
+}
+
+.swarmobot__title {
+  color: #fff;
+  font-weight: 550;
+  text-align: left;
+  padding-top: 120px;
+  margin-left: 150px;
+  font-size: 5rem;
+  position: relative;
+  z-index: 2;
+  text-transform: uppercase;
+}
+
+.swarmobot__title--stroke {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.150);
+  position: absolute;
+  top: 50%;
+  left: 35px;
+  transform: translateY(-50%);
+}
+
+/* DESCRIPTION */
+
+.swarmobot__description--wrapper {
+  width: 100%;
+  font-size: 1.5rem;
+  color: #fff;
+  padding-top: 220px;
+  padding-right: 5%;
+  padding-bottom: 300px;
+}
+
+.swarmobot__description {
+  width: 53%;
+  position: absolute;
+  right: 0;
+}
+
+/* LINKS */
+
+.swarmobot__links--wrapper {
+  padding-top: 100px;
+  padding-bottom: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+.swarmobot__links--text {
+  text-align: center;
+  width: 400px;
+  margin: 20px;
+  padding: auto;
+  flex: 1 1 auto;
+}
+
+.swarmobot__links {
+  text-decoration: none;
+  color: #08D3FF;
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 960px) {
+
+  .swarmobot__title {
+    padding: 10% 0 0 0;
+    margin: 0;
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .swarmobot__description--wrapper {
+    padding: 0;
+  }
+
+  .swarmobot__description {
+    position: relative;
+    word-spacing: 1px;
+    width: 70%;
+    padding: 0;
+    margin: auto;
+    margin-top: 70px;
+    font-size: 1.3rem;
+  }
+
+  .swarmobot__links--wrapper {
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-size: 1.3rem;
+    padding-top: 50px;
+  }
+
+  .swarmobot__links--text {
+    width: 300px;
+  }
+}
