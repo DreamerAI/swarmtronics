@@ -1,17 +1,16 @@
 import React from 'react';
 import './Footer.css';
 
-import { Link } from 'react-router-dom';
-
 import { IconContext } from 'react-icons';
 import {
   IoLocationSharp,
-  IoLogoFacebook,
   IoLogoInstagram,
   IoLogoLinkedin,
+  IoLogoTwitter,
   IoLogoVk,
   IoMail,
 } from 'react-icons/io5';
+import { SiResearchgate } from 'react-icons/si';
 
 function Footer({ width }) {
   return (
@@ -30,22 +29,20 @@ function Footer({ width }) {
             <span className="footer__info">Lomonosova, 9</span>
           </div>
           <div className="footer__links">
-            <Link
-              to={{
-                pathname:
-                  'https://example.zendesk.com/hc/en-us/articles/123456789-Privacy-Policies',
-              }}
-              target="_blank">
+            <a href="https://www.instagram.com/swarmtronics/">
               <IoLogoInstagram />
-            </Link>
-            <a href="/">
+            </a>
+            <a href="https://ru.linkedin.com/company/swarmtronics">
               <IoLogoLinkedin />
             </a>
-            <a href="/">
-              <IoLogoFacebook />
+            <a href="https://twitter.com/swarmtronics">
+              <IoLogoTwitter />
             </a>
-            <a href="/">
+            <a href="https://m.vk.com/swarmtronics">
               <IoLogoVk />
+            </a>
+            <a href="https://researchgate.net/lab/swarmtronics">
+              <SiResearchgate size={35} />
             </a>
           </div>
         </div>
