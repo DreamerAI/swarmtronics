@@ -6,6 +6,7 @@
   background-image: url(../../../public/images/Swarmobot_Background.png);
   background-position: 100%;
   display: block;
+
 }
 
 .swarmobot__title--wrapper {
@@ -41,14 +42,13 @@
   font-size: 1.5rem;
   color: #fff;
   padding-top: 220px;
-  padding-right: 5%;
   padding-bottom: 300px;
 }
 
 .swarmobot__description {
   width: 53%;
   position: absolute;
-  right: 0;
+  right: 5%;
 }
 
 /* LINKS */
@@ -66,10 +66,9 @@
 
 .swarmobot__links--text {
   text-align: center;
-  width: 400px;
-  margin: 20px;
+  width: 360px;
+  margin: 0 30px;
   padding: auto;
-  flex: 1 1 auto;
 }
 
 .swarmobot__links {
@@ -81,11 +80,15 @@
 
 @media screen and (max-width: 960px) {
 
+  .swarmobot-container {
+    height: 100%;
+  }
+
   .swarmobot__title {
     padding: 10% 0 0 0;
     margin: 0;
     text-align: center;
-    font-size: 3rem;
+    font-size: 3.2rem;
   }
 
   .swarmobot__description--wrapper {
@@ -96,10 +99,13 @@
     position: relative;
     word-spacing: 1px;
     width: 70%;
+    text-align: justify;
     padding: 0;
+    line-height: 30px;
     margin: auto;
     margin-top: 70px;
     font-size: 1.3rem;
+    right: 0;
   }
 
   .swarmobot__links--wrapper {
@@ -112,5 +118,6 @@
 
   .swarmobot__links--text {
     width: 300px;
+    padding-top: 30px;
   }
 }
