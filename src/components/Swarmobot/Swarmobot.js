@@ -34,21 +34,25 @@ function Swarmobot({ width }) {
         <div className="swarmobot__links--wrapper">
           <p className="swarmobot__links--text">
             Printed circuit board design and supplementary documentation:{' '}
-            <Link to="/" className="swarmobot__links">
+            <a
+              href="https://github.com/swarmtronics/swarmdroid.processing"
+              className="swarmobot__links">
               GITHUB
-            </Link>
+            </a>
           </p>
           <p className="swarmobot__links--text">
             Software for post-processing of experiments:{' '}
-            <Link to="/" className="swarmobot__links">
+            <a
+              href="https://github.com/swarmtronics/swarmdroid.processing"
+              className="swarmobot__links">
               GITHUB
-            </Link>
+            </a>
           </p>
           <p className="swarmobot__links--text">
             Detailed description of the platform:{' '}
-            <Link to="/" className="swarmobot__links">
-              ARXIV.ORG
-            </Link>
+            <a href="#" className="swarmobot__links">
+              TBD
+            </a>
           </p>
         </div>
       </div>

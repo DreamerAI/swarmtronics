@@ -15,7 +15,7 @@ const Slider = ({ id, title, link, personIndex, index }) => {
     <>
       <article className={position} key={id}>
         <p className="title">{title}</p>
-        <a href={link}>{link}</a>
+        <a href={link}>Link</a>
       </article>
     </>
   );

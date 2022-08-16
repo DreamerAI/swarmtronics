@@ -16,8 +16,7 @@ function AboutUs({ width }) {
           is dedicated to the development of robotic swarms composed of very simple robots yet
           capable of self-organizing and performing complex tasks. To achieve our goal, we perform
           deep fundamental research of the underlying many-particle physics and develop robotic
-          platforms distributed freely under{' '}
-          <span className="aboutUs__description--highlight">GPL</span> license.
+          platforms distributed freely under GPL license.
         </p>
       </div>
     </>

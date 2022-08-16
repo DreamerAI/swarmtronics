@@ -5,12 +5,20 @@ import data from './mediaData';
 
 import Slider from './Slider';
 
+import { useSwipeable } from 'react-swipeable';
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 
 function Media({ width }) {
   const [index, setIndex] = useState(0);
   const [news, setNews] = useState(data);
+
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => setIndex(index + 1),
+    onSwipedRight: () => setIndex(index - 1),
+  });
 
   useEffect(() => {
     AOS.init({
@@ -39,19 +47,29 @@ function Media({ width }) {
           <div className="media__news--headline">
             <p>Recent mentions in news portals and blogs</p>
           </div>
-          <div className="media__news--container">
-            {news.map((person, personIndex) => {
-              return <Slider key={person.id} {...person} personIndex={personIndex} index={index} />;
-            })}
+          <div className="media__news--container" {...swipeHandlers}>
+            <div className="media__btn btn--prev" onClick={() => setIndex(index - 1)}>
+              <AiOutlineLeft />
+            </div>
+            <div className="media__article">
+              {news.map((person, personIndex) => {
+                return (
+                  <Slider key={person.id} {...person} personIndex={personIndex} index={index} />
+                );
+              })}
+            </div>
+            <div className="media__btn btn--next" onClick={() => setIndex(index + 1)}>
+              <AiOutlineRight />
+            </div>
           </div>
-          <div className="media__next-btn">
+          {/* <div className="media__next-btn">
             <span href="#" className="media__btn" onClick={() => setIndex(index - 1)}>
               ← {width <= 960 ? null : 'Prev'}
             </span>
             <span href="#" className="media__btn" onClick={() => setIndex(index + 1)}>
               → {width <= 960 ? null : 'Next'}
             </span>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

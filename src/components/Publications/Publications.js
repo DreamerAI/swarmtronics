@@ -27,15 +27,15 @@ const PublicationsCard = ({ title, info }) => {
               <p className="publications__card--info-wrapper">
                 {info.firstParagraph}
                 <p className="publications__card--link">
-                  <a href={info.firstLink}>{info.firstLink}</a>
+                  <a href={info.firstLink}>Link</a>
                 </p>
                 {info.secondParagraph}
                 <p className="publications__card--link">
-                  <a href={info.secondLink}>{info.secondLink}</a>
+                  <a href={info.secondLink}>Link</a>
                 </p>
                 {info.thirdParagraph}
                 <p className="publications__card--link">
-                  <a href={info.thirdLink}>{info.thirdLink}</a>
+                  <a href={info.thirdLink}>Link</a>
                 </p>
               </p>
             )}

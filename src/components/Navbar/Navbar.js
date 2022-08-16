@@ -54,11 +54,6 @@ function Navbar() {
                   Contacts
                 </HashLink>
               </li>
-              <p className="nav-language nav-item">
-                <HashLink to="/language" className="nav-links" onClick={closeMobileMenu}>
-                  RU
-                </HashLink>
-              </p>
             </ul>
           </div>
         </div>

@@ -24,15 +24,18 @@
     position: relative;
     z-index: 2;
     text-transform: uppercase;
+    z-index: 1;
 }
 
 .aboutUs__title--stroke {
+
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.150);
     position: absolute;
     top: 50%;
     right: 35px;
     transform: translateY(-50%);
+    z-index: 1;
 }
 
 /* DESCRIPTION  */
@@ -59,13 +62,14 @@
 
 @media screen and (max-width: 960px) {
     .aboutUs-container {
-        height: 800px;
+        height: 100%;
     }
 
     .aboutUs__title {
         padding: 10% 0 0 0;
         margin: 0;
         text-align: center;
+        margin: auto;
         font-size: 4rem;
     }
 
@@ -77,11 +81,14 @@
     }
 
     .aboutUs__description {
+        text-align: justify;
         word-spacing: 1px;
+        line-height: 30px;
         width: 70%;
         padding: 0;
         margin: auto;
-        margin-top: 150px;
+        margin-top: 100px;
         font-size: 1.3rem;
+        padding-bottom: 70px;
     }
 }

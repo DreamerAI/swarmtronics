@@ -5,15 +5,14 @@
     color: #000000;
     margin: auto;
     margin-bottom: 20px;
-    width: 90vw;
+    width: 89vw;
     border-radius: 10px;
     border: 1px solid #000000;
     cursor: pointer;
 }
 
 .publications__card--wrapper {
-
-    padding: 20px 0;
+    padding: 10px 0;
     display: flex;
     border-radius: 10px;
 
@@ -22,7 +21,7 @@
 
 .publications__card--wrapperDark {
     color: #fff;
-    padding: 20px 0;
+    padding: 10px 0;
     margin: 0;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -39,29 +38,26 @@
 
 .publications__card--info {
     font-size: 1.2rem;
+    padding: 0px 40px;
 }
 
 .publications__card--link a {
-    width: 100px;
     padding: 0;
-    padding-left: 10px;
 }
 
 .publications__card--info p {
-    padding: 30px 40px;
-
+    padding: 30px 0;
 }
 
 .publications__card--info a {
     color: #08D3FF;
     text-decoration: none;
-
 }
 
 .publcations__card--btn {
     background: transparent;
     border-color: transparent;
-    font-size: 2.7rem;
+    font-size: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -95,6 +91,7 @@
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px rgba(0, 0, 0, 0.7);
     position: absolute;
+    z-index: 1;
     top: 50%;
     left: 35px;
     transform: translateY(-50%);

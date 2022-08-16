@@ -1,0 +1,145 @@
+.team__modal--wrapper {
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.team__modal--wrapper.show {
+    opacity: 1;
+    pointer-events: visible;
+}
+
+.team__modal--container {
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-rows: 0.4fr 0.8fr 0.9fr 1.7fr 1.2fr;
+    gap: 0px 0px;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+
+.team__modal--container {
+
+
+    margin: auto;
+    width: 400px;
+    height: 500px;
+    border: 2px solid #000000;
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.82);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(4.9px);
+    border: 1px solid rgba(65, 65, 65, 0.55);
+
+    border-radius: 10px;
+
+    border-top-color: rgba(50, 50, 50, 0.5);
+    border-top-width: 4rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+}
+
+.team__modal--header {
+    text-align: right;
+    width: 100%;
+    margin-top: 20px;
+    margin-right: 50px;
+    padding: 0;
+    font-size: 1.5rem;
+
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.team__modal--img {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+img {
+    background-color: rgba(50, 50, 50, 0.2);
+    border-radius: 50%;
+}
+
+.team__modal--title {
+    text-align: center;
+    margin-top: 20px;
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.team__modal--cardName {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.team__modal--cardPosition {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.team__modal--email {
+    font-size: 1.3rem;
+    font-weight: 500;
+
+    grid-area: 4 / 1 / 5 / 2;
+}
+
+.team__modal--emailLink {
+    font-weight: 100;
+    color: #08D3FF;
+    text-decoration: none;
+}
+
+
+.team__modal--links {
+    text-align: center;
+    font-size: 1.4rem;
+
+
+    grid-area: 5 / 1 / 6 / 2;
+}
+
+.team__modal--linksIcons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 500px) {
+    .team__modal--container {
+        width: 300px;
+
+    }
+
+    .team__modal--emailLink {
+        width: 200px;
+        height: 100%;
+        font-size: 1.2rem;
+    }
+}

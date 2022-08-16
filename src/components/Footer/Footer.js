@@ -11,6 +11,21 @@ import {
   IoMail,
 } from 'react-icons/io5';
 import { SiResearchgate } from 'react-icons/si';
+import { Link } from 'react-router-dom';
+
+const ButtonMailto = ({ mailto, label }) => {
+  return (
+    <Link
+      className="footer__info"
+      to="#"
+      onClick={(e) => {
+        window.location.href = mailto;
+        e.preventDefault();
+      }}>
+      {label}
+    </Link>
+  );
+};
 
 function Footer({ width }) {
   return (
@@ -22,11 +37,21 @@ function Footer({ width }) {
           </div>
           <div className="footer__email">
             <IoMail size={width <= 960 ? 30 : 40} />
-            <span className="footer__info">contact@swarmtronics.com</span>
+            <ButtonMailto
+              label="contact@swarmtronics.com"
+              mailto="mailto:contact@swarmtronics.com"
+            />
           </div>
           <div className="footer__address">
             <IoLocationSharp size={width <= 960 ? 30 : 40} />
-            <span className="footer__info">Lomonosova, 9</span>
+
+            <a
+              href="https://goo.gl/maps/Kxcp4FW2GwHm1xDF7"
+              rel="noreferrer"
+              target="_blank"
+              className="footer__info">
+              Lomonosova, 9
+            </a>
           </div>
           <div className="footer__links">
             <a href="https://www.instagram.com/swarmtronics/">

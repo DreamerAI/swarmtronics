@@ -11,74 +11,136 @@ import tenthImg from './team/10.png';
 import eleventhImg from './team/11.png';
 import twelfthImg from './team/12.png';
 
-export const firstPerson = {
-  name: 'Nikita Olekhno',
-  position: 'PhD, Team Leader',
-  personImg: firstImg,
-};
+export const firstRow = [
+  {
+    name: 'Nikita Olekhno',
+    position: 'PhD, Team Leader',
+    personImg: firstImg,
+    email: 'nikita.olekhno@itmo.ru',
+    LinkedIn: 'https://www.linkedin.com/in/olekhnon/',
+    Twitter: 'https://twitter.com/olekhnon',
+    GoogleSC: 'https://scholar.google.com/citations?user=CaRkJykAAAAJ&hl=en',
+    ResearchGate: 'https://www.researchgate.net/profile/Nikita-Olekhno',
+    Instagram: null,
+  },
+  {
+    name: 'Alexey Dmitriev',
+    position: 'Lead Circuit Development',
+    personImg: secondImg,
+    email: 'alexey.dmitriev@metalab.ifmo.ru',
+    LinkedIn: null,
+    Twitter: 'https://twitter.com/denshion_phy',
+    GoogleSC: 'https://scholar.google.com/citations?user=gSTJ8qQAAAAJ&hl=en',
+    ResearchGate: 'https://www.researchgate.net/profile/Alexey-Dmitriev-5',
+    Instagram: null,
+  },
+  {
+    name: 'Vadim Porvatov',
+    position: 'Lead Software Development, ML',
+    personImg: thirdImg,
+    email: 'eighonet@gmail.com',
+    LinkedIn: 'https://www.linkedin.com/in/eighonet/',
+    Twitter: 'https://twitter.com/eighonet',
+    GoogleSC: 'https://scholar.google.com/citations?hl=en&user=PaH-exwAAAAJ',
+    ResearchGate: 'https://www.researchgate.net/profile/Vadim-Porvatov',
+    Instagram: 'https://www.instagram.com/stochastic_paws/',
+  },
+];
 
-export const secondPerson = {
-  name: 'Alexey Dmitriev',
-  position: 'Lead Circuit Development',
-  personImg: secondImg,
-};
+export const secondRow = [
+  {
+    name: 'Alina Rozenblit',
+    position: 'Lead Design Development, Physics',
+    personImg: fourthImg,
+    email: 'alina.rozenblit@metalab.ifmo.ru',
+    LinkedIn: 'https://www.linkedin.com/in/alina-rozenblit-8b9a1a20b/',
+    Twitter: null,
+    GoogleSC: 'https://scholar.google.com/citations?user=MWWrTuAAAAAJ&hl=en',
+    ResearchGate: 'https://www.researchgate.net/profile/Alina-Rozenblit-2',
+    Instagram: null,
+  },
+  {
+    name: 'Anastasia Molodtsova',
+    position: 'Design Development, Physics',
+    personImg: fifthImg,
+    email: 'a.molodtsova@metalab.ifmo.ru',
+    LinkedIn: null,
+    Twitter: 'https://twitter.com/NasiiaSun',
+    GoogleSC: null,
+    ResearchGate: 'https://www.researchgate.net/profile/Anastasia-Molodtsova',
+    Instagram: null,
+  },
+  {
+    name: 'Oleg Burmistrov',
+    position: 'Circuit Development',
+    personImg: sixthImg,
+    email: 'oleg.burmistrov@metalab.ifmo.ru',
+    LinkedIn: null,
+    Twitter: null,
+    GoogleSC: 'https://scholar.google.com/citations?user=3X5z57kAAAAJ&hl=en',
+    ResearchGate: 'https://www.researchgate.net/profile/Oleg-Burmistrov',
+    Instagram: null,
+  },
+];
 
-export const thirdPerson = {
-  name: 'Vadim Porvatov',
-  position: 'Lead Software Development, ML',
-  personImg: thirdImg,
-};
+export const thirdRow = [
+  {
+    name: 'Ekaterina Puhtina',
+    position: 'Circuit Development',
+    personImg: seventhImg,
+    email: 'ekaterina.puhtina@metalab.ifmo.ru',
+    LinkedIn: null,
+    Twitter: 'https://twitter.com/denshion_phy',
+    GoogleSC: 'https://scholar.google.com/citations?user=NbJvLeQAAAAJ&hl=en',
+    ResearchGate: 'https://www.researchgate.net/profile/Ekaterina-Puhtina',
+    Instagram: 'https://www.instagram.com/klugrn/',
+  },
+  {
+    name: 'Mikhail Buzakov',
+    position: 'Physics',
+    personImg: eighthImg,
+    email: 'mikhail.buzakov@metalab.ifmo.ru',
+  },
+  {
+    name: 'Ekaterina Maslova',
+    position: 'Physics',
+    personImg: ninethImg,
+    email: 'ekaterina.maslova@metalab.ifmo.ru ',
+    LinkedIn: 'linkedin.com/in/ekaterina-maslova-300092232',
+    Twitter: 'https://twitter.com/mrsmaslo',
+    GoogleSC: 'https://scholar.google.com/citations?user=wm4NfmUAAAAJ&hl=en',
+    ResearchGate: 'https://www.researchgate.net/profile/Ekaterina-Maslova',
+    Instagram: null,
+  },
+];
 
-export const fourthPerson = {
-  name: 'Alina Rozenblit',
-  position: 'Lead Design Development, Physics',
-  personImg: fourthImg,
-};
-
-export const fifthPerson = {
-  name: 'Anastasia Molodtsova',
-  position: 'Design Development, Physics',
-  personImg: fifthImg,
-};
-
-export const sixthPerson = {
-  name: 'Oleg Burmistrov',
-  position: 'Circuit Development',
-  personImg: sixthImg,
-};
-
-export const seventhPerson = {
-  name: 'Ekaterina Puhtina',
-  position: 'Circuit Development',
-  personImg: seventhImg,
-};
-
-export const eighthPerson = {
-  name: 'Mikhail Buzakov',
-  position: 'Physics',
-  personImg: eighthImg,
-};
-
-export const ninethPerson = {
-  name: 'Ekaterina Maslova',
-  position: 'Physics',
-  personImg: ninethImg,
-};
-
-export const tenthPerson = {
-  name: 'Vyacheslav Smirnov',
-  position: 'Physics',
-  personImg: tenthImg,
-};
-
-export const eleventhPerson = {
-  name: 'Daria Sennikova',
-  position: 'Modeling',
-  personImg: eleventhImg,
-};
-
-export const twelfthPerson = {
-  name: 'Alexander Solomonov',
-  position: 'Modeling',
-  personImg: twelfthImg,
-};
+export const fourthRow = [
+  {
+    name: 'Vyacheslav Smirnov',
+    position: 'Physics',
+    personImg: tenthImg,
+    email: 'v.smirnov@metalab.ifmo.ru',
+    LinkedIn: 'https://www.linkedin.com/in/obieshka/',
+    Twitter: 'https://twitter.com/obieshka',
+    GoogleSC: null,
+    ResearchGate: null,
+    Instagram: 'https://www.instagram.com/obieshka/',
+  },
+  {
+    name: 'Daria Sennikova',
+    position: 'Modeling',
+    personImg: eleventhImg,
+    email: 'daria.sennikova@metalab.ifmo.ru',
+    LinkedIn: 'https://www.linkedin.com/in/pfirrsich/',
+    Twitter: 'https://twitter.com/pfirrrsich',
+    GoogleSC: null,
+    ResearchGate: null,
+    Instagram: null,
+  },
+  {
+    name: 'Alexander Solomonov',
+    position: 'Modeling',
+    personImg: twelfthImg,
+    email: 'aleksandr.solomonov@metalab.ifmo.ru',
+  },
+];

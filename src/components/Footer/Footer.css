@@ -1,8 +1,8 @@
 .footer-container {
-    padding: 70px 0;
+    padding: 70px 100px;
     background-size: cover;
-    background-image: url(../../../public/images/Contacts_Background.png);
-    background-position: center;
+    background-image: url(../../../public/images/Contacts_Background3.png);
+    background-position: top;
     background-attachment: scroll;
     width: 100%;
     display: flex;
@@ -10,6 +10,7 @@
     align-items: center;
     color: #fff;
 }
+
 
 .footer__headline {
     font-size: 2.5rem;
@@ -30,6 +31,8 @@
     align-items: center;
     font-size: 1.3rem;
     margin-left: 10px;
+    text-decoration: none;
+    color: #fff;
 }
 
 

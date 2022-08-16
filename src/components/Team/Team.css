@@ -8,8 +8,8 @@
 
 .team__card--wrapper {
     margin-top: 80px;
-    margin-left: 3%;
-    margin-right: 3%;
+    margin-left: 5%;
+    margin-right: 5%;
     align-items: center;
     display: flex;
 }
@@ -27,12 +27,12 @@
 }
 
 .team__cardName {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 550;
 }
 
 .team__cardPosition {
-    font-size: 1.125rem;
+    font-size: 1rem;
 }
 
 
@@ -41,6 +41,7 @@
     justify-content: space-around;
     align-items: center;
     align-content: center;
+    margin: 0 40px;
 }
 
 
@@ -69,13 +70,19 @@
     transform: translateY(-50%);
 }
 
+span {
+    padding: 0;
+    margin: 0;
+}
+
+
+
 
 /* Mobile Team Component classes */
 
 @media screen and (max-width: 960px) {
     .team__card--row {
         flex-direction: column;
-        width: 100%;
 
     }
 
