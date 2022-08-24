@@ -38,13 +38,11 @@
 
 .team__modal--container {
 
-
     margin: auto;
     width: 400px;
     height: 500px;
     border: 2px solid #000000;
 
-    /* From https://css.glass */
     background: rgba(255, 255, 255, 0.82);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(3px);
@@ -53,8 +51,6 @@
 
     border-radius: 10px;
 
-    border-top-color: rgba(50, 50, 50, 0.5);
-    border-top-width: 4rem;
     position: fixed;
     left: 0;
     top: 0;
@@ -74,11 +70,22 @@
     grid-area: 1 / 1 / 2 / 2;
 }
 
+.team__modal--closeIcon {
+    color: rgba(50, 50, 50, 0.8);
+    cursor: pointer;
+}
+
+.team__modal--closeIcon:hover {
+    color: #000000;
+}
+
 .team__modal--img {
     grid-area: 2 / 1 / 3 / 2;
 }
 
-img {
+.team__modal--image {
+    width: 100px;
+    height: 100px;
     background-color: rgba(50, 50, 50, 0.2);
     border-radius: 50%;
 }
@@ -99,17 +106,29 @@ img {
     font-weight: 400;
 }
 
+.team__modal--description {
+    color: rgba(50, 50, 50, 0.8);
+
+    font-size: 0.9rem;
+    margin: 0px 20px;
+    margin-bottom: 10px;
+}
+
 .team__modal--email {
-    font-size: 1.3rem;
-    font-weight: 500;
+    font-size: 1.2rem;
+    text-align: center;
 
     grid-area: 4 / 1 / 5 / 2;
 }
 
 .team__modal--emailLink {
-    font-weight: 100;
     color: #08D3FF;
     text-decoration: none;
+}
+
+.team__modal--emailLink:hover {
+    transition: transform 0.2s;
+    transform: scale(1.05);
 }
 
 

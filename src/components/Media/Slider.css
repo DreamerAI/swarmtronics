@@ -18,3 +18,14 @@ article.nextSlide {
   display: none;
   transform: translateX(100%);
 }
+
+
+.slider__resource {
+  color: #08D3FF;
+  font-size: 1.5rem;
+  padding-bottom: 20px;
+}
+
+.slider__title {
+  font-size: 3rem;
+}

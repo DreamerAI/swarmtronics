@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import './Swarmobot.css';
 
 import AOS from 'aos';
@@ -33,7 +32,7 @@ function Swarmobot({ width }) {
 
         <div className="swarmobot__links--wrapper">
           <p className="swarmobot__links--text">
-            Printed circuit board design and supplementary documentation:{' '}
+            Printed circuit board design and supplementary documentation:
             <a
               href="https://github.com/swarmtronics/swarmdroid.processing"
               className="swarmobot__links">
@@ -41,7 +40,7 @@ function Swarmobot({ width }) {
             </a>
           </p>
           <p className="swarmobot__links--text">
-            Software for post-processing of experiments:{' '}
+            Software for post-processing of experiments:
             <a
               href="https://github.com/swarmtronics/swarmdroid.processing"
               className="swarmobot__links">
@@ -49,7 +48,7 @@ function Swarmobot({ width }) {
             </a>
           </p>
           <p className="swarmobot__links--text">
-            Detailed description of the platform:{' '}
+            Detailed description of the platform:
             <a href="#" className="swarmobot__links">
               TBD
             </a>

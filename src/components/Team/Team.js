@@ -11,13 +11,12 @@ function TeamCard({
   name,
   position,
   personImg,
+  description,
   email,
   LinkedIn,
-  Twitter,
-  callback,
   GoogleSC,
   ResearchGate,
-  Instagram,
+  callback,
   setShowModal,
 }) {
   return (
@@ -30,12 +29,11 @@ function TeamCard({
             name,
             position,
             personImg,
+            description,
             email,
             LinkedIn,
-            Twitter,
             GoogleSC,
             ResearchGate,
-            Instagram,
             setShowModal(true),
           )
         }>
@@ -56,12 +54,11 @@ function Team({ width }) {
     name: null,
     position: null,
     personImg: null,
+    description: null,
     email: null,
     LinkedIn: null,
-    Twitter: null,
     GoogleSC: null,
     ResearchGate: null,
-    Instagram: null,
   });
   const [showModal, setShowModal] = useState(false);
 
@@ -87,33 +84,30 @@ function Team({ width }) {
                 position={item.position}
                 personImg={item.personImg}
                 email={item.email}
+                description={item.description}
                 LinkedIn={item.LinkedIn}
-                Twitter={item.Twitter}
                 GoogleSC={item.GoogleSC}
                 ResearchGate={item.ResearchGate}
-                Instagram={item.Instagram}
                 setShowModal={setShowModal}
                 callback={(
                   name,
                   position,
                   personImg,
+                  description,
                   email,
                   LinkedIn,
-                  Twitter,
                   GoogleSC,
                   ResearchGate,
-                  Instagram,
                 ) =>
                   setActiveCard((prev) => ({
                     name,
                     position,
                     personImg,
+                    description,
                     email,
                     LinkedIn,
-                    Twitter,
                     GoogleSC,
                     ResearchGate,
-                    Instagram,
                   }))
                 }
               />
@@ -128,33 +122,30 @@ function Team({ width }) {
                 position={item.position}
                 personImg={item.personImg}
                 email={item.email}
+                description={item.description}
                 LinkedIn={item.LinkedIn}
-                Twitter={item.Twitter}
                 GoogleSC={item.GoogleSC}
                 ResearchGate={item.ResearchGate}
-                Instagram={item.Instagram}
                 setShowModal={setShowModal}
                 callback={(
                   name,
                   position,
                   personImg,
+                  description,
                   email,
                   LinkedIn,
-                  Twitter,
                   GoogleSC,
                   ResearchGate,
-                  Instagram,
                 ) =>
                   setActiveCard((prev) => ({
                     name,
                     position,
                     personImg,
+                    description,
                     email,
                     LinkedIn,
-                    Twitter,
                     GoogleSC,
                     ResearchGate,
-                    Instagram,
                   }))
                 }
               />
@@ -169,33 +160,30 @@ function Team({ width }) {
                 position={item.position}
                 personImg={item.personImg}
                 email={item.email}
+                description={item.description}
                 LinkedIn={item.LinkedIn}
-                Twitter={item.Twitter}
                 GoogleSC={item.GoogleSC}
                 ResearchGate={item.ResearchGate}
-                Instagram={item.Instagram}
                 setShowModal={setShowModal}
                 callback={(
                   name,
                   position,
                   personImg,
+                  description,
                   email,
                   LinkedIn,
-                  Twitter,
                   GoogleSC,
                   ResearchGate,
-                  Instagram,
                 ) =>
                   setActiveCard((prev) => ({
                     name,
                     position,
                     personImg,
+                    description,
                     email,
                     LinkedIn,
-                    Twitter,
                     GoogleSC,
                     ResearchGate,
-                    Instagram,
                   }))
                 }
               />
@@ -210,33 +198,30 @@ function Team({ width }) {
                 position={item.position}
                 personImg={item.personImg}
                 email={item.email}
+                description={item.description}
                 LinkedIn={item.LinkedIn}
-                Twitter={item.Twitter}
                 GoogleSC={item.GoogleSC}
                 ResearchGate={item.ResearchGate}
-                Instagram={item.Instagram}
                 setShowModal={setShowModal}
                 callback={(
                   name,
                   position,
                   personImg,
+                  description,
                   email,
                   LinkedIn,
-                  Twitter,
                   GoogleSC,
                   ResearchGate,
-                  Instagram,
                 ) =>
                   setActiveCard((prev) => ({
                     name,
                     position,
                     personImg,
+                    description,
                     email,
                     LinkedIn,
-                    Twitter,
                     GoogleSC,
                     ResearchGate,
-                    Instagram,
                   }))
                 }
               />

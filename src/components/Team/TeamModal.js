@@ -2,8 +2,7 @@ import React from 'react';
 import './TeamModal.css';
 
 import { AiOutlineClose } from 'react-icons/ai';
-import { IoLogoInstagram, IoLogoLinkedin, IoLogoTwitter } from 'react-icons/io5';
-import { SiGooglescholar, SiResearchgate } from 'react-icons/si';
+import { SiGooglescholar, SiResearchgate, SiLinkedin } from 'react-icons/si';
 import { IconContext } from 'react-icons';
 
 import { Link } from 'react-router-dom';
@@ -30,28 +29,32 @@ function TeamModal({ activeCard, setShowModal, showModal }) {
         className={`team__modal--wrapper ${showModal ? 'show' : ''}`}
         onClick={() => setShowModal(false)}>
         <div className="team__modal--container" onClick={(e) => e.stopPropagation()}>
+          {/* First Grid */}
           <div className="team__modal--header">
-            <AiOutlineClose color="rgba(50, 50, 50, 0.8)" onClick={() => setShowModal(false)} />
+            <AiOutlineClose
+              onClick={() => setShowModal(false)}
+              className="team__modal--closeIcon"
+            />
           </div>
-          <img src={activeCard.personImg} alt="" />
+          {/* Second Grid */}
+          <img src={activeCard.personImg} alt="activeCard_picture" className="team__modal--image" />
+          {/* Third Grid */}
           <div className="team__modal--title">
             <p className="team__modal--cardName">{activeCard.name}</p>
             <p className="team__modal--cardPosition">{activeCard.position}</p>
           </div>
+          {/* Fourth Grid */}
           <div className="team__modal--email">
+            <p className="team__modal--description">{activeCard.description}</p>
             <ButtonMailto label={activeCard.email} mailto={`mailto:${activeCard.email}`} />
           </div>
+          {/* Fifth Grid */}
           <div className="team__modal--links">
             <IconContext.Provider value={{ size: '40', color: '#000000' }}>
               <div className="team__modal--linksIcons">
                 {Boolean(activeCard.LinkedIn) ? (
                   <a href={activeCard.LinkedIn}>
-                    <IoLogoLinkedin />
-                  </a>
-                ) : null}
-                {Boolean(activeCard.Instagram) ? (
-                  <a href={activeCard.Instagram}>
-                    <IoLogoInstagram />
+                    <SiLinkedin />
                   </a>
                 ) : null}
                 {Boolean(activeCard.GoogleSC) ? (
@@ -59,16 +62,10 @@ function TeamModal({ activeCard, setShowModal, showModal }) {
                     <SiGooglescholar />{' '}
                   </a>
                 ) : null}
-                {Boolean(activeCard.Twitter) ? (
-                  <a href={activeCard.Twitter}>
-                    {' '}
-                    <IoLogoTwitter />{' '}
-                  </a>
-                ) : null}
                 {Boolean(activeCard.ResearchGate) ? (
                   <a href={activeCard.ResearchGate}>
                     {' '}
-                    <SiResearchgate size={35} />
+                    <SiResearchgate />
                   </a>
                 ) : null}
               </div>

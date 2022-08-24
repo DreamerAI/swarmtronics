@@ -10,6 +10,7 @@ import 'aos/dist/aos.css';
 
 const PublicationsCard = ({ title, info }) => {
   const [expanded, setExpanded] = useState(false);
+
   return (
     <>
       <IconContext.Provider value="color:#fff">
@@ -27,15 +28,15 @@ const PublicationsCard = ({ title, info }) => {
               <p className="publications__card--info-wrapper">
                 {info.firstParagraph}
                 <p className="publications__card--link">
-                  <a href={info.firstLink}>Link</a>
+                  <a href={info.firstLink}>{info.firstParagraph ? 'Link' : null}</a>
                 </p>
                 {info.secondParagraph}
                 <p className="publications__card--link">
-                  <a href={info.secondLink}>Link</a>
+                  <a href={info.secondLink}>{info.secondParagraph ? 'Link' : null}</a>
                 </p>
                 {info.thirdParagraph}
                 <p className="publications__card--link">
-                  <a href={info.thirdLink}>Link</a>
+                  <a href={info.thirdLink}>{info.thirdParagraph ? 'Link' : null}</a>
                 </p>
               </p>
             )}

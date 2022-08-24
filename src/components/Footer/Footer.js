@@ -30,20 +30,20 @@ const ButtonMailto = ({ mailto, label }) => {
 function Footer({ width }) {
   return (
     <>
-      <IconContext.Provider value={{ size: '40', color: '#fff' }}>
+      <IconContext.Provider value={{ size: width <= 1150 ? 40 : 34, color: '#fff' }}>
         <div className="footer-container" id="Contacts">
           <div className="footer__headline">
             <span>Swarmtronics</span>
           </div>
           <div className="footer__email">
-            <IoMail size={width <= 960 ? 30 : 40} />
+            <IoMail size={width <= 960 ? 30 : 30} className="footer__infoIcon" />
             <ButtonMailto
               label="contact@swarmtronics.com"
               mailto="mailto:contact@swarmtronics.com"
             />
           </div>
           <div className="footer__address">
-            <IoLocationSharp size={width <= 960 ? 30 : 40} />
+            <IoLocationSharp size={width <= 960 ? 30 : 30} className="footer__infoIcon" />
 
             <a
               href="https://goo.gl/maps/Kxcp4FW2GwHm1xDF7"
@@ -67,7 +67,7 @@ function Footer({ width }) {
               <IoLogoVk />
             </a>
             <a href="https://researchgate.net/lab/swarmtronics">
-              <SiResearchgate size={35} />
+              <SiResearchgate size={width <= 1150 ? 35 : 30} />
             </a>
           </div>
         </div>

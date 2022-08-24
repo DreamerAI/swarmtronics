@@ -17,7 +17,7 @@ function Navbar() {
       <IconContext.Provider value={{ color: '#fff' }}>
         <div className="navbar">
           <div className="navbar-container container">
-            <HashLink to="/" className="navbar-logoText" onClick={closeMobileMenu}>
+            <HashLink to="#About-us" className="navbar-logoText" onClick={closeMobileMenu} smooth>
               Swarmtronics
             </HashLink>
             <div className="menu-icon" onClick={handleClick}>

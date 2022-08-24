@@ -3,7 +3,7 @@ import news from './mediaData';
 
 import './Slider.css';
 
-const Slider = ({ id, title, link, personIndex, index }) => {
+const Slider = ({ id, resource, title, link, personIndex, index }) => {
   let position = 'nextSlide';
   if (personIndex === index) {
     position = 'activeSlide';
@@ -14,7 +14,8 @@ const Slider = ({ id, title, link, personIndex, index }) => {
   return (
     <>
       <article className={position} key={id}>
-        <p className="title">{title}</p>
+        <p className="slider__resource">{resource}</p>
+        <p className="slider__title">{title}</p>
         <a href={link}>Link</a>
       </article>
     </>
