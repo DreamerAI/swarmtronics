@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import data from './PublicationData';
+import { conference_papers, preprints, journal_articles } from './PublicationData';
 import './Publications.css';
 
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
@@ -8,38 +8,38 @@ import { IconContext } from 'react-icons';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const PublicationsCard = ({ title, info }) => {
+const PublicationsCard = ({ title, publicationsArr }) => {
   const [expanded, setExpanded] = useState(false);
+  const [height, setHeight] = useState('0px');
 
+  function toggleAccordion() {
+    setExpanded(!expanded);
+    setHeight(expanded ? '0px' : '1000px');
+  }
   return (
     <>
       <IconContext.Provider value="color:#fff">
         <div className="publications__card--container">
           <div
-            className={expanded ? 'publications__card--wrapperDark' : 'publications__card--wrapper'}
-            onClick={() => setExpanded(!expanded)}>
+            className={`publications__card--wrapper ${
+              expanded ? 'publications__card--wrapperDark' : ' '
+            }`}
+            onClick={() => toggleAccordion()}
+          >
             <button className="publcations__card--btn">
               {expanded ? <AiOutlineMinus color="white" /> : <AiOutlinePlus />}
             </button>
-            <h4 className="publications__card--title">{title}</h4>
+            <div className="publications__card--title">
+              <p>{title}</p>
+            </div>
           </div>
-          <div className="publications__card--info">
-            {expanded && (
-              <p className="publications__card--info-wrapper">
-                {info.firstParagraph}
-                <p className="publications__card--link">
-                  <a href={info.firstLink}>{info.firstParagraph ? 'Link' : null}</a>
-                </p>
-                {info.secondParagraph}
-                <p className="publications__card--link">
-                  <a href={info.secondLink}>{info.secondParagraph ? 'Link' : null}</a>
-                </p>
-                {info.thirdParagraph}
-                <p className="publications__card--link">
-                  <a href={info.thirdLink}>{info.thirdParagraph ? 'Link' : null}</a>
-                </p>
-              </p>
-            )}
+          <div style={{ maxHeight: `${height}` }} className={`publications__card--info `}>
+            {publicationsArr.map(({ id, info, link }) => (
+              <div className="publications__card--link" data-aos="fade-right" key={id}>
+                <p>{info}</p>
+                <a href={link}>{link ? 'Link' : null}</a>
+              </div>
+            ))}
           </div>
         </div>
       </IconContext.Provider>
@@ -48,7 +48,6 @@ const PublicationsCard = ({ title, info }) => {
 };
 
 function Publications({ width }) {
-  const [questions, setQuestions] = useState(data);
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -65,9 +64,9 @@ function Publications({ width }) {
           )}
         </div>
         <div className="publications__accordion--wrapper">
-          {questions.map((question) => (
-            <PublicationsCard key={question.id} {...question} />
-          ))}
+          <PublicationsCard title={'Preprints'} publicationsArr={preprints} />
+          <PublicationsCard title={'Journal Articles'} publicationsArr={journal_articles} />
+          <PublicationsCard title={'Conference Papers'} publicationsArr={conference_papers} />
         </div>
       </div>
     </>

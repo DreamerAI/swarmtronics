@@ -11,12 +11,19 @@ const Slider = ({ id, resource, title, link, personIndex, index }) => {
   if (personIndex === index - 1 || (index === 0 && personIndex === news.length - 1)) {
     position = 'lastSlide';
   }
+
   return (
     <>
-      <article className={position} key={id}>
+      <article
+        className={`slider__container ${position}`}
+        key={id}
+        style={{ transform: `translate(-${personIndex * 100}%)` }}
+      >
         <p className="slider__resource">{resource}</p>
         <p className="slider__title">{title}</p>
-        <a href={link}>Link</a>
+        <a className="slider__link" href={link}>
+          Link to the article
+        </a>
       </article>
     </>
   );

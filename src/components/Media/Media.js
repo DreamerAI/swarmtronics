@@ -44,9 +44,7 @@ function Media({ width }) {
           {width <= 960 ? null : <h2 className="media__title media__title--stroke">Media</h2>}
         </div>
         <div className="media__content--wrapper" data-aos="fade-right">
-          <div className="media__news--headline">
-            <p>Recent mentions in news portals and blogs</p>
-          </div>
+          <div className="media__news--headline">Recent mentions in news portals and blogs</div>
           <div className="media__news--container" {...swipeHandlers}>
             <div className="media__btn btn--prev" onClick={() => setIndex(index - 1)}>
               <AiOutlineLeft />

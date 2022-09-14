@@ -1,6 +1,5 @@
 @font-face {
   font-family: 'Webnar';
-  src: url('./fonts/Webnar-Medium.eot');
   src: local('Webnar Medium'), local('Webnar-Medium'),
     url('./fonts/Webnar-Medium.eot') format('embedded-opentype'),
     url('./fonts/Webnar-Medium.woff2 ') format('woff2'),

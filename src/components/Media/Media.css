@@ -4,6 +4,8 @@
     background-image: url(../../../public/images/Media_Background.jpg);
     background-position: bottom;
     background-attachment: scroll;
+
+
     width: 100%;
     margin-top: 80px;
     padding: 80px 0;
@@ -35,31 +37,24 @@
     transform: translateY(-50%);
 }
 
-.media__content--wrapper {
-    display: block;
-}
-
 /* NEWS SECTION */
 
 .media__news--headline {
-    margin-left: 5%;
-    margin-bottom: 2%;
+    color: #ffffff;
+    font-size: 3.5rem;
+    margin: 40px 0;
+    text-align: center;
 }
 
-.media__news--headline p {
-    color: #ffffff;
-    font-size: 4.5rem;
-    margin: 30px 0;
-}
 
 .media__news--container {
     margin: auto;
-    width: 90%;
+    width: 85%;
+
     border-radius: 10px;
     background: rgba(255, 255, 255, 1);
     border: 1px solid rgba(255, 255, 255, 0.32);
     padding: 40px 0;
-    overflow: hidden;
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
@@ -73,19 +68,17 @@
     align-content: center;
     justify-items: center;
     align-items: center;
-    height: 100%;
+    height: 600px;
 }
 
 
 
 .media__news--container a {
     display: block;
-    color: #1091ae;
+    color: #08D3FF;
     text-decoration: none;
     font-size: 1.5rem;
     margin-top: 10%;
-    padding-left: 3%;
-    padding-right: 3%;
 }
 
 
@@ -111,6 +104,11 @@
 .media__article {
     width: 100%;
     height: 100%;
+
+    overflow: hidden;
+    display: flex;
+
+
 }
 
 .btn--next {
@@ -121,48 +119,51 @@
 }
 
 
-
-@media screen and (max-width: 960px) {
-    .media__btn {
-        width: 10%;
-        font-size: 1.2rem;
-        padding: 10px 10px;
-    }
-}
-
-
 /* MOBILE */
 
 @media screen and (max-width: 960px) {
 
     .media-container {
         padding: 20px 0;
+        padding-bottom: 100px;
     }
 
     .media__news--container {
         width: 90%;
+        height: 550px;
+        overflow-y: scroll;
     }
 
     .media__title {
+        font-size: 4rem;
         margin: 0;
         text-align: center;
     }
 
-    .media__news--headline p {
+    .media__news--headline {
+        font-size: 2rem;
+        margin: auto;
         color: #ffffff;
-        font-size: 2.5rem;
         margin: 50px 0;
     }
 
+
     .media__news--container p {
-        font-size: 2rem;
-        padding-bottom: 80px;
+        font-size: 1.5rem;
+        padding-bottom: 20px;
         padding-left: 7%;
     }
 
     .media__news--container a {
         font-size: 1.2rem;
         margin: 0 2%;
+        padding-left: 7%;
+    }
+
+    .media__btn {
+        width: 10%;
+        font-size: 1.2rem;
+        padding: 10px 10px;
     }
 
 }

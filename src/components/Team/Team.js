@@ -34,9 +34,10 @@ function TeamCard({
             LinkedIn,
             GoogleSC,
             ResearchGate,
-            setShowModal(true),
+            setShowModal(true)
           )
-        }>
+        }
+      >
         <div>
           <img src={personImg} alt="альтернативный текст" className="team__img" />
         </div>
@@ -97,7 +98,7 @@ function Team({ width }) {
                   email,
                   LinkedIn,
                   GoogleSC,
-                  ResearchGate,
+                  ResearchGate
                 ) =>
                   setActiveCard((prev) => ({
                     name,
@@ -135,7 +136,7 @@ function Team({ width }) {
                   email,
                   LinkedIn,
                   GoogleSC,
-                  ResearchGate,
+                  ResearchGate
                 ) =>
                   setActiveCard((prev) => ({
                     name,
@@ -173,7 +174,7 @@ function Team({ width }) {
                   email,
                   LinkedIn,
                   GoogleSC,
-                  ResearchGate,
+                  ResearchGate
                 ) =>
                   setActiveCard((prev) => ({
                     name,
@@ -211,7 +212,7 @@ function Team({ width }) {
                   email,
                   LinkedIn,
                   GoogleSC,
-                  ResearchGate,
+                  ResearchGate
                 ) =>
                   setActiveCard((prev) => ({
                     name,
@@ -227,7 +228,12 @@ function Team({ width }) {
               />
             ))}
         </div>
-        <TeamModal activeCard={activeCard} setShowModal={setShowModal} showModal={showModal} />
+        <TeamModal
+          activeCard={activeCard}
+          setShowModal={setShowModal}
+          showModal={showModal}
+          width={width}
+        />
       </div>
     </>
   );

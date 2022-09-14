@@ -1,13 +1,13 @@
 import React from 'react';
 import './TeamModal.css';
 
-import { AiOutlineClose } from 'react-icons/ai';
+import { AiOutlineClose, AiOutlineMail } from 'react-icons/ai';
 import { SiGooglescholar, SiResearchgate, SiLinkedin } from 'react-icons/si';
 import { IconContext } from 'react-icons';
 
 import { Link } from 'react-router-dom';
 
-const ButtonMailto = ({ mailto, label }) => {
+const ButtonMailto = ({ mailto, width, label }) => {
   return (
     <Link
       className="team__modal--emailLink"
@@ -15,19 +15,21 @@ const ButtonMailto = ({ mailto, label }) => {
       onClick={(e) => {
         window.location.href = mailto;
         e.preventDefault();
-      }}>
-      {label}
+      }}
+    >
+      {width <= 960 ? <AiOutlineMail size={40} /> : `${label}`}
     </Link>
   );
 };
 
-function TeamModal({ activeCard, setShowModal, showModal }) {
+function TeamModal({ activeCard, setShowModal, showModal, width }) {
   console.log();
   return (
     <>
       <div
         className={`team__modal--wrapper ${showModal ? 'show' : ''}`}
-        onClick={() => setShowModal(false)}>
+        onClick={() => setShowModal(false)}
+      >
         <div className="team__modal--container" onClick={(e) => e.stopPropagation()}>
           {/* First Grid */}
           <div className="team__modal--header">
@@ -46,7 +48,11 @@ function TeamModal({ activeCard, setShowModal, showModal }) {
           {/* Fourth Grid */}
           <div className="team__modal--email">
             <p className="team__modal--description">{activeCard.description}</p>
-            <ButtonMailto label={activeCard.email} mailto={`mailto:${activeCard.email}`} />
+            <ButtonMailto
+              label={activeCard.email}
+              mailto={`mailto:${activeCard.email}`}
+              width={width}
+            />
           </div>
           {/* Fifth Grid */}
           <div className="team__modal--links">

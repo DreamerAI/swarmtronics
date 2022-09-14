@@ -2,30 +2,45 @@ article {
   width: 100%;
   height: 100%;
   opacity: 0;
+  flex-shrink: 0;
 }
 
 article.activeSlide {
   opacity: 1;
   transform: translateX(0);
+
+  width: 100%;
+  height: 100%;
 }
 
-article.lastSlide {
-  display: none;
-  transform: translateX(-100%);
-}
 
-article.nextSlide {
-  display: none;
-  transform: translateX(100%);
+.slider__container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 2.4fr 0.3fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "slider__resource"
+    "slider__title"
+    "slider__link";
+  justify-items: start;
+  transition: all .5s ease;
 }
-
 
 .slider__resource {
   color: #08D3FF;
   font-size: 1.5rem;
   padding-bottom: 20px;
+  grid-area: slider__resource;
 }
 
 .slider__title {
+  grid-area: slider__title;
   font-size: 3rem;
+}
+
+.slider__link {
+  grid-area: slider__link;
 }

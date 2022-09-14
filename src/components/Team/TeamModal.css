@@ -147,12 +147,12 @@
     align-items: center;
     align-content: center;
     gap: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 @media screen and (max-width: 500px) {
     .team__modal--container {
-        width: 300px;
+        width: 340px;
 
     }
 
@@ -160,5 +160,9 @@
         width: 200px;
         height: 100%;
         font-size: 1.2rem;
+    }
+
+    .team__modal--linksIcons {
+        margin: 0;
     }
 }

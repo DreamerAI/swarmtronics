@@ -2,47 +2,72 @@
 
 
 .publications__card--container {
+    position: relative;
+
     color: #000000;
     margin: auto;
     margin-bottom: 20px;
     width: 89vw;
-    border-radius: 10px;
-    border: 1px solid #000000;
     cursor: pointer;
+
+    border: 1px solid black;
+    transition: all 0.5s ease-in-out;
+
+
 }
 
 .publications__card--wrapper {
-    padding: 10px 0;
-    display: flex;
-    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 0.3fr 1.9fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    justify-items: start;
 
+    grid-template-areas:
+        "publcations__card--btn publications__card--title";
 }
-
 
 .publications__card--wrapperDark {
-    color: #fff;
-    padding: 10px 0;
-    margin: 0;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    background-color: #000000;
-    display: flex;
 
+    color: #fff;
+    background-color: #000000;
+
+    transition: all 0.3s ease-in-out;
 }
 
+
 .publications__card--title {
-    padding-left: 2%;
-    font-size: 2.9rem;
-    font-weight: 400;
+    margin: 5px 0;
+    display: grid;
+    font-size: 2.7rem;
+    text-transform: uppercase;
+    text-align: center;
+
+    justify-self: start;
+    align-self: center;
+    grid-area: publications__card--title;
 }
 
 .publications__card--info {
     font-size: 1.2rem;
-    padding: 0px 40px;
+    height: 650px;
+    overflow: auto;
+    transition: all 0.4s ease-in-out;
+
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
 }
 
-.publications__card--link a {
-    padding: 0;
+.publications__card--info::-webkit-scrollbar {
+    /* WebKit */
+    width: 0;
+    height: 0;
+}
+
+.publications__card--link {
+    margin: 25px 45px;
 }
 
 .publications__card--info p {
@@ -55,16 +80,16 @@
 }
 
 .publcations__card--btn {
+    display: grid;
     background: transparent;
     border-color: transparent;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 1rem;
+    font-size: 1.5rem;
+    justify-self: center;
     align-self: center;
 
+    grid-area: publcations__card--btn;
 }
+
 
 
 /* Publications Component classes */
@@ -73,13 +98,13 @@
     position: relative;
     font-family: sans-serif;
     margin-bottom: 70px;
+
 }
 
 .publications__title {
     color: #000000;
     font-weight: 550;
     text-align: left;
-    padding-top: 120px;
     margin-left: 150px;
     font-size: 4.7rem;
     position: relative;
@@ -108,6 +133,10 @@
     }
 
     .publications__card--title {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
+    }
+
+    .publcations__card--btn {
+        font-size: 1.3rem;
     }
 }

@@ -2,7 +2,7 @@
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
-  height: 1024px;
+  height: 100%;
   background-image: url(../../../public/images/Swarmobot_Background.jpg);
   background-position: 100%;
   display: block;
@@ -35,21 +35,59 @@
   transform: translateY(-50%);
 }
 
+/* BOT ANIMATION */
+
+.swarmobot__animation {
+  background: rgba(4, 4, 4, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
+
+  padding: 100px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-self: center;
+  align-self: center;
+  grid-area: swarmobot__animation;
+}
+
+.swarmobot__animation_cap {
+  position: relative;
+  z-index: 2;
+}
+
+.swarmobot__animation_body {
+  position: relative;
+  z-index: 1;
+}
+
 /* DESCRIPTION */
 
 .swarmobot__description--wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 0.4fr 0.6fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "swarmobot__animation swarmobot__text";
+  justify-items: start;
+
   width: 100%;
   font-size: 1.5rem;
   color: #fff;
-  padding-top: 220px;
-  padding-bottom: 300px;
+  padding-top: 120px;
 }
 
-.swarmobot__description {
-  width: 53%;
-  position: absolute;
-  right: 5%;
+.swarmobot__text {
+  justify-self: center;
+  align-self: center;
+  grid-area: swarmobot__text;
+  padding-right: 10%;
 }
+
 
 /* LINKS */
 
@@ -92,7 +130,14 @@
   }
 
   .swarmobot__description--wrapper {
+    margin-top: 120px;
     padding: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "swarmobot__animation"
+      "swarmobot__text";
+
   }
 
   .swarmobot__description {
@@ -114,6 +159,14 @@
     flex-direction: column;
     font-size: 1.3rem;
     padding-top: 50px;
+  }
+
+  .swarmobot__text {
+    padding-right: 0;
+  }
+
+  .swarmobot__animation {
+    padding: 80px;
   }
 
   .swarmobot__links--text {
