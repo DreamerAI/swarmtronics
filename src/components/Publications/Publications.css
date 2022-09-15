@@ -55,13 +55,10 @@
     transition: all 0.4s ease-in-out;
 
     scrollbar-width: none;
-    /* Firefox */
     -ms-overflow-style: none;
-    /* Internet Explorer 10+ */
 }
 
 .publications__card--info::-webkit-scrollbar {
-    /* WebKit */
     width: 0;
     height: 0;
 }

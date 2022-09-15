@@ -60,14 +60,6 @@ function Media({ width }) {
               <AiOutlineRight />
             </div>
           </div>
-          {/* <div className="media__next-btn">
-            <span href="#" className="media__btn" onClick={() => setIndex(index - 1)}>
-              ← {width <= 960 ? null : 'Prev'}
-            </span>
-            <span href="#" className="media__btn" onClick={() => setIndex(index + 1)}>
-              → {width <= 960 ? null : 'Next'}
-            </span>
-          </div> */}
         </div>
       </div>
     </>
